@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global behavior belongs in base */
+@layer base {
+  html { scroll-behavior: smooth; }
+}
+
+/* ===== HubSpiral UI Primitives (Tailwind @apply) ===== */
+@layer components {
+  /* Layout */
+  .hs-container { @apply mx-auto w-full max-w-6xl px-4 sm:px-6; }
+  .hs-section { @apply mt-10; }
+
+  /* Surfaces */
+  .hs-card { @apply rounded-2xl border border-slate-200 bg-white p-6 shadow-sm; }
+  .hs-card-soft { @apply rounded-2xl border border-slate-200 bg-slate-50 p-6; }
+
+  /* Brand surfaces (Home reference look) */
+  .hs-card-brand { @apply rounded-2xl border border-brand-300 bg-brand-50 p-6 shadow-surface-soft; }
+  .hs-section-brand { @apply rounded-3xl border border-brand-300 bg-brand-50 p-8 shadow-surface sm:p-12; }
+  .hs-surface-brand { @apply border border-brand-300 bg-brand-50 shadow-surface-soft; }
+  .hs-title-brand { @apply font-bold tracking-tight text-brand-900; }
+
+  /* Typography */
+  .hs-h1 { @apply text-3xl font-bold tracking-tight sm:text-4xl; }
+  .hs-h2 { @apply text-xl font-semibold text-slate-900; }
+  .hs-sub { @apply mt-2 max-w-3xl text-sm leading-6 text-slate-600 sm:text-base; }
+
+  /* Pills / tags (Home-style) */
+  .hs-pill {
+    @apply inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold
+           shadow-surface-soft;
+  }
+  .hs-pill-brand { @apply hs-pill border-brand-300 bg-brand-50 text-slate-700; }
+  .hs-pill-soft  { @apply hs-pill border-slate-200 bg-white text-slate-700 shadow-sm; }
+
+  /* Lists (Home-style) */
+  .hs-list { @apply mt-4 space-y-2 text-sm text-slate-700; }
+  .hs-list-item { @apply flex gap-2; }
+  .hs-dot { @apply mt-1 inline-block h-4 w-4 rounded-full border border-slate-300; }
+
+  /* Buttons (system) */
+  .hs-btn {
+    @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold
+           transition-transform duration-150 ease-out
+           hover:-translate-y-0.5 active:translate-y-0
+           focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-slate-100;
+  }
+  .hs-btn-primary { @apply hs-btn bg-slate-900 text-white hover:bg-slate-800; }
+  .hs-btn-secondary { @apply hs-btn border border-slate-300 bg-white text-slate-900 hover:bg-slate-50; }
+  .hs-btn-brand { @apply hs-btn-secondary border-brand-300 text-brand-900 hover:bg-brand-100 shadow-surface-soft; }
+
+  /* Links */
+  .hs-link {
+    @apply text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-500;
+  }
+
+  /* Icon pills (for social + back-to-top) */
+  .hs-icon-pill {
+    @apply inline-flex items-center justify-center rounded-full border border-brand-300 bg-brand-50
+           px-3 py-2 text-sm font-semibold text-brand-900 shadow-surface-soft
+           transition-transform duration-150 ease-out
+           hover:-translate-y-0.5 hover:bg-brand-100 active:translate-y-0;
+  }
+
+  /* Nav */
+  .hs-nav-link { @apply text-sm font-medium text-slate-700 hover:text-slate-900; }
+
+  /* Forms */
+  .hs-input {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm
+           outline-none ring-0 placeholder:text-slate-400
+           focus:border-slate-400 focus:ring-4 focus:ring-slate-100;
+  }
+  .hs-select {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm
+           outline-none focus:border-slate-400 focus:ring-4 focus:ring-slate-100;
+  }
+  .hs-textarea {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm
+           outline-none ring-0 placeholder:text-slate-400
+           focus:border-slate-400 focus:ring-4 focus:ring-slate-100;
+  }
+
+  /* Shell */
+  .hs-body { @apply min-h-screen bg-white text-slate-900 antialiased; }
+  .hs-header { @apply sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur; }
+
+  .hs-header-inner {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6
+           grid grid-cols-3 items-center gap-4 py-4;
+  }
+
+  .hs-brand-slot { @apply flex items-center; }
+  .hs-nav-slot { @apply flex items-center justify-center; }
+  .hs-cta-slot { @apply flex items-center justify-end; }
+
+  .hs-nav { @apply hidden items-center gap-6 md:flex; }
+
+  .hs-mobile-nav { @apply border-t border-slate-200/70 md:hidden; }
+  .hs-mobile-nav-inner {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6
+           flex flex-wrap gap-x-5 gap-y-2 py-3;
+  }
+
+  .hs-main { @apply mx-auto w-full max-w-6xl px-4 sm:px-6 py-10; }
+
+  .hs-footer { @apply border-t border-slate-200 bg-white; }
+  .hs-footer-inner { @apply mx-auto w-full max-w-6xl px-4 sm:px-6 py-10; }
+}

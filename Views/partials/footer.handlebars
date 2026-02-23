@@ -1,0 +1,98 @@
+<footer class="mt-16 border-t border-slate-200 bg-white">
+  <div class="max-w-6xl mx-auto px-4 py-6">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+      <!-- LEFT: Copyright -->
+      <div class="text-xs text-slate-500">
+        © {{year}}
+        {{#if site.businessName}}{{site.businessName}}{{else}}{{site.name}}{{/if}}.
+        All rights reserved.
+      </div>
+
+      <!-- CENTER: Legal links -->
+      <div class="flex flex-wrap justify-start sm:justify-center gap-x-4 gap-y-2 text-xs font-semibold">
+        <a href="/privacy" class="text-slate-600 hover:text-brand-900">Privacy</a>
+        <a href="/terms" class="text-slate-600 hover:text-brand-900">Terms</a>
+        <a href="/returns" class="text-slate-600 hover:text-brand-900">Returns</a>
+      </div>
+
+      <!-- RIGHT: Social buttons + Back to top -->
+      <div class="flex items-center justify-start sm:justify-end gap-4">
+
+        <!-- Social buttons -->
+        <div class="flex items-center gap-2">
+          {{!-- Shared button style via utilities (no CSS file edits) --}}
+          {{!-- X --}}
+          <a
+            href="{{#if site.social.x}}{{site.social.x}}{{else}}https://x.com{{/if}}"
+            target="_blank"
+            rel="noopener"
+            aria-label="X"
+            title="X"
+            class="inline-flex items-center justify-center rounded-lg border border-brand-300 bg-brand-50 p-2 text-brand-900 shadow-surface-soft transition duration-200 ease-out
+                   hover:bg-brand-100 hover:shadow-surface hover:-translate-y-0.5 hover:scale-[1.06]
+                   active:scale-[0.98]
+                   focus:outline-none focus:ring-2 focus:ring-brand-300
+                   motion-reduce:transform-none motion-reduce:transition-none"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+              <path d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.9-6.5L6.3 22H2l7.3-8.5L1 2h6.3l4.4 5.8L18.9 2zm-1.1 18h1.7L7.2 4H5.4l12.4 16z"/>
+            </svg>
+          </a>
+
+          {{!-- LinkedIn --}}
+          <a
+            href="{{#if site.social.linkedin}}{{site.social.linkedin}}{{else}}https://www.linkedin.com{{/if}}"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            class="inline-flex items-center justify-center rounded-lg border border-brand-300 bg-brand-50 p-2 text-brand-900 shadow-surface-soft transition duration-200 ease-out
+                   hover:bg-brand-100 hover:shadow-surface hover:-translate-y-0.5 hover:scale-[1.06]
+                   active:scale-[0.98]
+                   focus:outline-none focus:ring-2 focus:ring-brand-300
+                   motion-reduce:transform-none motion-reduce:transition-none"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.65-1.85 3.39-1.85 3.62 0 4.29 2.38 4.29 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/>
+            </svg>
+          </a>
+
+          {{!-- Instagram --}}
+          <a
+            href="{{#if site.social.instagram}}{{site.social.instagram}}{{else}}https://www.instagram.com{{/if}}"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            title="Instagram"
+            class="inline-flex items-center justify-center rounded-lg border border-brand-300 bg-brand-50 p-2 text-brand-900 shadow-surface-soft transition duration-200 ease-out
+                   hover:bg-brand-100 hover:shadow-surface hover:-translate-y-0.5 hover:scale-[1.06]
+                   active:scale-[0.98]
+                   focus:outline-none focus:ring-2 focus:ring-brand-300
+                   motion-reduce:transform-none motion-reduce:transition-none"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-.9a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Top button (matches social buttons + same bounce) -->
+        <a
+          href="#top"
+          aria-label="Back to top"
+          title="Back to top"
+          class="inline-flex items-center justify-center rounded-lg border border-brand-300 bg-brand-50 p-2 text-brand-900 shadow-surface-soft transition duration-200 ease-out
+                 hover:bg-brand-100 hover:shadow-surface hover:-translate-y-0.5 hover:scale-[1.06]
+                 active:scale-[0.98]
+                 focus:outline-none focus:ring-2 focus:ring-brand-300
+                 motion-reduce:transform-none motion-reduce:transition-none"
+        >
+          <span class="text-sm font-semibold leading-none">↑</span>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</footer>

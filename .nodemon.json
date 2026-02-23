@@ -1,0 +1,5 @@
+{
+  "watch": ["src", "routes", "views", "config"],
+  "ignore": ["public/**", "node_modules/**"],
+  "ext": "js,handlebars,json"
+}
